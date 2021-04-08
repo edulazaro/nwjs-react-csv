@@ -3,13 +3,14 @@ import moment from 'moment';
 import Papa from 'papaparse';
 import Bike from './support/Bike';
 import Journey from './components/Journey';
+import path from 'path';
 import 'moment-duration-format';
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.filePath = process.env.REACT_APP_FILEPATH;
+    this.filePath = /*path.resolve('.') + path.sep + '..' + path.sep +*/ process.env.REACT_APP_FILEPATH;
     this.totalTime = 0;
     this.averageTime = 0;
     this.totalRentals = 0;
@@ -31,6 +32,8 @@ class App extends React.Component {
         return reader.read().then(function (result) {
             return decoder.decode(result.value);
         });
+    }).catch((error) => {
+      alert('Please add a file named file.csv inside the folder ' + this.filePath);
     });
   }
 
@@ -109,7 +112,7 @@ class App extends React.Component {
       <div className="App">
         <header className="container">
           <div className="py-5 text-center">
-            <h2>BIKE CSV READER</h2>
+            <h2>BIKE CSV READER {this.filePath}</h2>
           </div>
         </header>
 

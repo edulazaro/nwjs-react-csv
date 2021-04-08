@@ -16,11 +16,11 @@ class Journey extends React.Component {
   }
 
   getString() {
-    let string = `Bike ${this.bikeId} was ${this.arrivalTime ? 'docked (arrived) at station ' + this.stationId + ' at ' + this.arrivalTime.format('hh:mm:ss')
+    let string = `Bike ${this.bikeId} was ${this.arrivalTime ? 'docked (arrived) at station ' + this.stationId + ' at ' + this.arrivalTime.format('YYYY-MM-DD HH:mm:ss')
         : 'already at station ' + this.stationId + ' at the start of the reporting period'}`;
 
     if (this.departureTime) {
-      string +=  ` and was ${this.arrivalTime ? 'rented out again ' : 'first rented out '} at ${this.departureTime.format('hh:mm:ss')}`;
+      string +=  ` and was ${this.arrivalTime ? 'rented out again ' : 'first rented out '} at ${this.departureTime.format('YYYY-MM-DD HH:mm:ss')}`;
     }
 
     return string;

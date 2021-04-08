@@ -52,7 +52,6 @@
     "version": "latest",
     "flavor": "normal",
     "buildDir": "./build",
-    "cacheDir": "./cache",
-    "macIcns": "./src/logo.icns"
+    "cacheDir": "./cache"
   }
 }
