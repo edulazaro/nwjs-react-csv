@@ -1,4 +1,5 @@
 {
+  "chromium-args": "--allow-file-access-from-files --allow-file-access --user-data-dir='./data'",
   "name": "bike-app",
   "version": "0.1.0",
   "private": true,
