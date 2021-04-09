@@ -12,7 +12,7 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.filePath = process.env.REACT_APP_FILEPATH;
+    this.filePath = 'file.csv';
     this.totalTime = 0;
     this.averageTime = 0;
     this.totalRentals = 0;
