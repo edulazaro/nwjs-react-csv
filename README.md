@@ -1,10 +1,10 @@
 ## Bike report App
 
-This demo App was developed to be a contained app whoch doesn't require any other software to be installed. No browser, no server, no node and no docker. It reads the contents of a CSV containing rental times for a set of bikes between stations and displays the medium run time for all bikes and all stations.
+This demo App was developed to be a contained App which doesn't require any other software to be installed. No browser, no server, no node and no docker. It reads the contents of a CSV containing rental times for a set of bikes between stations and displays the average run time for all bikes and all stations.
 
 ## Install
 
-Just download the latest release and execute the file `bike-app.exe`. It has only been tested for Windows.
+Just download the latest release and execute the file `bike-app.exe`.
 
 You need to place a file named `file.csv` in the root folder of the application. This could be the content of the file:
 
@@ -20,10 +20,15 @@ You need to place a file named `file.csv` in the root folder of the application.
 3,10000,20210325T21:10:05,20210325T21:40:05,
 ```
 
+*It has only been tested for Windows.
+
 ### Development
 
 To run the development version follow these steps:
 
 1. Clone the repository.
-2. Execite the node `npm install` command.
+2. Execute the node `npm install` command.
 2. Execute the command `npm start` to start [nw.js](https://nwjs.io/).
+
+To build the aplication execute `npm run build`. A compressed version of the application will be created in the `build` directory.
+
